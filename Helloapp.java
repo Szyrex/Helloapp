@@ -1,24 +1,24 @@
 public class Helloapp {
-    //uc4
-
-
+    //uc5
+   
 
     public static void main(String[] args) {
 
         // Default value
         String name = "World";
 
-        // If names are provided, combine them
+        // If arguments are provided, combine them
         if (args.length > 0) {
 
             StringBuilder nameBuilder = new StringBuilder();
+            boolean first = true;
 
-            for (int i = 0; i < args.length; i++) {
-                nameBuilder.append(args[i]);
-
-                if (i < args.length - 1) {
+            for (String n : args) {
+                if (!first) {
                     nameBuilder.append(", ");
                 }
+                nameBuilder.append(n);
+                first = false;
             }
 
             name = nameBuilder.toString();
@@ -26,7 +26,6 @@ public class Helloapp {
 
         System.out.println("Hello, " + name + "!");
     }
-
 
 
 
