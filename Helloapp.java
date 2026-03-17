@@ -1,20 +1,36 @@
 public class Helloapp {
-    //uc3
+    //uc4
 
 
 
     public static void main(String[] args) {
 
-        // Default name
+        // Default value
         String name = "World";
 
-        // Check if a name is provided as a command-line argument
+        // If names are provided, combine them
         if (args.length > 0) {
-            name = args[0]; // Use the provided name
+
+            StringBuilder nameBuilder = new StringBuilder();
+
+            for (int i = 0; i < args.length; i++) {
+                nameBuilder.append(args[i]);
+
+                if (i < args.length - 1) {
+                    nameBuilder.append(", ");
+                }
+            }
+
+            name = nameBuilder.toString();
         }
 
         System.out.println("Hello, " + name + "!");
     }
+
+
+
+
+
 }
 
 
