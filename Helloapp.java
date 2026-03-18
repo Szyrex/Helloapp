@@ -1,39 +1,16 @@
-public class Helloapp {
-    //uc5
-   
 
+ public class Helloapp {
+    //uc6
     public static void main(String[] args) {
-
-        // Default value
-        String name = "World";
-
-        // If arguments are provided, combine them
-        if (args.length > 0) {
-
-            StringBuilder nameBuilder = new StringBuilder();
-            boolean first = true;
-
-            for (String n : args) {
-                if (!first) {
-                    nameBuilder.append(", ");
-                }
-                nameBuilder.append(n);
-                first = false;
-            }
-
-            name = nameBuilder.toString();
+        if (args.length == 0) {
+            System.out.println("Hello, World!");
+            return;
         }
-
-        System.out.println("Hello, " + name + "!");
+        StringBuilder nameBuilder = new StringBuilder();
+        for (String name : args) {
+            nameBuilder.append(name).append(", ");
+        }
+        String names = nameBuilder.substring(0, nameBuilder.length() - 2);
+        System.out.println("Hello, " + names + "!");
     }
-
-
-
-
 }
-
-
-
-
-
-
