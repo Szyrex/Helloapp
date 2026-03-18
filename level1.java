@@ -1,5 +1,6 @@
 import java.util.Scanner;
 public class level1 {
+    \\q1
     
 
 
